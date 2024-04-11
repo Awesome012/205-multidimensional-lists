@@ -36,10 +36,10 @@ print(pokedex[0])
 print("-")
 
 print("Raw output of select items in pokedex entry")
-print("Name",pokedex[1]['name'])
-print("Types",pokedex[1]['types'])
+print("Name",pokedex[0]['name'])
+print("Types",pokedex[0]['types'])
 print("Raw output of single entry from a specific type")
-print("Type[0]",pokedex[1]['types'][0])
+print("Type[0]",pokedex[0]['types'][0])
 print("-")
 
 print("use of for loop to display all the names")

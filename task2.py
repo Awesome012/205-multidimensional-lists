@@ -20,10 +20,27 @@ teamData = {
         'goalsFor' : 0,
         'goalsAgainst' : 0
     },
-    'BC' : {}
+    'BC' : {},
+    'MC' : {},
+    'SK' : {},
+    'ON' : {},
+    'QC' : {},
+    'PE' : {},
+    'NS' : {},
+    'NB' : {},
+    'NL' : {},
+    'YT' : {},
+    'NT' : {},
+    'NU' : {}
 }
 
 def tests():
     assert teamData['BC']['gamesPlayed'] == 12
     assert teamData['BC']['wins'] == 5
 
+for i in teams:
+    for i in teamData:
+        if teamData[0] == 'AC':
+            continue
+        else: 
+            print(i)

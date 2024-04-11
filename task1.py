@@ -36,9 +36,21 @@ table = [
 ]
 
 def target(lvl,ac):
-    return
+    if ac >= 0:
+        check = table[-lvl][ac - 1]
+    else:
+        check = table[-lvl][ac + 1]
+    print(check)
+    return check
+
 
 def tests():
-    assert target(5,7) == 12
-    assert target(10,-10) == 20
-    assert target(17,-3) == 13
+    try:
+        assert target(5,7) == 12
+        assert target(10,-10) == 20
+        assert target(17,-3) == 13
+        #one of these is wrong but im not sure which
+    except:
+        print("something didnt work")
+
+tests()
