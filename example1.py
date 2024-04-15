@@ -52,4 +52,4 @@ print(f"{pokedex[0]['name']} is of the following types:")
 for i in pokedex[0]['types']:
     print(i)
 
-# 
+print(pokedex[0]['attack'])
