@@ -5,10 +5,10 @@ cards = {}
 cardranks = ["2 of ", "3 of ", "4 of ", "5 of ", "6 of ", "7 of ", "8 of ", "9 of ", "10 of ", "Jack of ", "Queen of ", "King of ","Ace of "]
 cardsuits = ["Clubs", "Diamonds", "Hearts", "Spades"]
 players = {
-    "player1" : [],
-    "player2" : [],
-    "player3" : [],
-    "player4" : []
+    "player1" : {},
+    "player2" : {},
+    "player3" : {},
+    "player4" : {}
     }
 
 check = 0 
@@ -33,25 +33,29 @@ cool = list(cards.keys())[0]
 for x in range(5):
     for z in players:
         cool = list(final.keys())[0]
+        nice = cards[cool]
+        players[z][cool] = nice
         del final[cool]
-        players[z].append(cool)
+        del cards[cool]
+        players[z][cool] = nice
 #print(players)
 for x in players:
-    print(players[x])
-
-
-print(cards)
+    #print(players[x])
+    continue
+#print(players)
+players.sort()
+#print(cards)
 
 for x in players:
     for z in players[x]:
-        #print(z)
-        #print(cards[z])
+        print(z)
         continue
 
 
-    #print("\n")
+    print("\n")
 
-    
+#print(cards)
+
 
 #for x in players:
     #print(players[x])
