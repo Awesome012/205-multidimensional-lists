@@ -1,16 +1,10 @@
 import random
+from typing import Final
 
 cards = {}
-cards2 = []
 cardranks = ["2 of ", "3 of ", "4 of ", "5 of ", "6 of ", "7 of ", "8 of ", "9 of ", "10 of ", "Jack of ", "Queen of ", "King of ","Ace of "]
 cardsuits = ["Clubs", "Diamonds", "Hearts", "Spades"]
 players = {
-    "player1" : [],
-    "player2" : [],
-    "player3" : [],
-    "player4" : []
-    }
-final = {
     "player1" : [],
     "player2" : [],
     "player3" : [],
@@ -24,26 +18,38 @@ for x in cardsuits:
         check = check + 1
 #print(cards)
 
-for x in cards:
-    cards2.append(x)
-#print(cards2)
+temp = list(cards.values())
+random.shuffle(temp)
+test = dict(zip(cards, temp))
+final = dict(sorted(test.items(), key=lambda item: item[1]))
+#print(final)
 
-random.shuffle(cards2)
-#print(cards2)
-
+for x in final:
+    #print(x)
+    continue
+cool = list(cards.keys())[0]
+#print(cool)
+#print(cards)
 for x in range(5):
     for z in players:
-        players[f"{z}"].append(cards2[0])
-        cards2.pop(0)
-#print(cards2)
+        cool = list(final.keys())[0]
+        del final[cool]
+        players[z].append(cool)
+#print(players)
+for x in players:
+    print(players[x])
+
+
+print(cards)
 
 for x in players:
     for z in players[x]:
-        print(z)
-        print(cards[z])
+        #print(z)
+        #print(cards[z])
+        continue
 
 
-    print("\n")
+    #print("\n")
 
     
 
