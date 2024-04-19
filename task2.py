@@ -32,8 +32,6 @@ def tests():
     assert teamData['BC']['gamesPlayed'] == 12
     print("tests both work")
 
-
-
 for x in teamData:
     if "g" in teamData[x]:
         continue
@@ -46,7 +44,6 @@ for x in teamData:
         'goalsFor' : 0,
         'goalsAgainst' : 0
     }
-    
 
 for x in games:
     if x['homeScore'] > x['awayScore']:
@@ -63,7 +60,6 @@ for x in games:
         teamData[losecheck]['losses'] += 1
         teamData[losecheck]['gamesPlayed'] += 1
 
-
     elif x['homeScore'] < x['awayScore']:
         #print(f"{x['homeScore']} < {x['awayScore']}")
         wcheck = teams.index(x['away'])
@@ -77,7 +73,6 @@ for x in games:
         losecheck = teams[lcheck]
         teamData[losecheck]['losses'] += 1
         teamData[losecheck]['gamesPlayed'] += 1
-
 
     elif x['homeScore'] == x['awayScore']:
         #print(f"{x['homeScore']} = {x['awayScore']}")

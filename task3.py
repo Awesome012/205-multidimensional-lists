@@ -1,5 +1,4 @@
 import random
-from typing import Final
 
 cards = {}
 cardranks = ["2 of ", "3 of ", "4 of ", "5 of ", "6 of ", "7 of ", "8 of ", "9 of ", "10 of ", "Jack of ", "Queen of ", "King of ","Ace of "]
@@ -11,6 +10,7 @@ players = {
     "Player 4" : {}
     }
 
+cNumber = int(input("how many cards should each player have? (input 1-13): "))
 check = 0 
 for x in cardsuits:
     for z in cardranks:
@@ -23,7 +23,7 @@ test = dict(zip(cards, temp))
 final = dict(sorted(test.items(), key=lambda item: item[1]))
 cool = list(cards.keys())[0]
 
-for x in range(5):
+for x in range(cNumber):
     for z in players:
         cool = list(final.keys())[0]
         nice = cards[cool]
@@ -35,7 +35,6 @@ for x in range(5):
 for x in players:
     players[x] = sorted(players[x].items(), key=lambda x:x[1])
     players[x] = dict(players[x])
-
 
 for x in players:
     print(f"{x}:")
